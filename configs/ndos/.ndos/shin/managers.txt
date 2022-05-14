@@ -1,7 +1,0 @@
-Managers         Full Name/Description
-brew     ->      Homebrew
-port     ->      macPorts
-cargo    ->      Rust Cargo
-indiepkg ->      Indiepkg
-npm      ->      NodeJS
-pip      ->      Python - Pip
