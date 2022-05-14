@@ -34,7 +34,7 @@ As my hotkey dameon I'm using [shkd](https://github.com/koekeishiya/skhd)(simple
 The colorscheme I'm currently using on most of my apps and CLI tools is the [catpuccin](https://github.com/catppuccin) colorscheme. I use it in iTerm, Spotify, Neovim, VSCode, Übersicht widgets, Shell Prompt and in some wallpapers.
 
 ## Terminal
-I switched to [iTerm]() about 8 months ago because I needed a true color terminal. The font I'm using is the [Liga SFMono Nerd Font]() together the terminal and the font make a great combination.
+I switched to [iTerm](https://iterm2.com) about 8 months ago because I needed a true color terminal. The font I'm using is the [Liga SFMono Nerd Font](https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized) together the terminal and the font make a great combination.
 
 ## Spotify config
 In my opinion Spotifys UI is a bit bland boring. Which is why installed [Spicetify](https://spicetify.app). Spicetify allows you to change spotify using Js and Css.
