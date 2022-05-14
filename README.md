@@ -19,7 +19,6 @@ Just all my dotfiles on my mac
 - Shell prompt
 - File structure
 - Searching files
-- Mac defaults
 - Installing all the dotfiles using the installer
 - Additional info
 
