@@ -1,0 +1,22 @@
+# ===> Imports & Libraries
+
+
+# ===> Constants & Global Variables
+# <Variable description>
+
+
+
+# ===> Functions & Classes
+# <Function description>
+
+
+
+# ===> Main Function
+# <main -> <your description>
+def main():
+    # <your code>
+    pass
+
+# ===> Execute Main Function
+if __name__ == '__main__':
+    main()

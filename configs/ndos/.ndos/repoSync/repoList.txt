@@ -1,0 +1,4 @@
+/Users/tom/Desktop/Anime-Girls-Holding-Programming-Books, https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books.git
+/Users/tom/lolcat, https://github.com/busyloop/lolcat.git
+/Users/tom/pure, https://github.com/sindresorhus/pure.git
+/Users/tom/powerlevel10k, https://github.com/romkatv/powerlevel10k.git
