@@ -19,9 +19,9 @@ alias yabaiOn="brew services start yabai"
 ################ Exports ##########################
 export TERM=xterm-256color                 # 256 color
 HISTCONTROL=ignoredups:erasedups           # no duplicate entries
-export PATH="/Users/tom/.deno/bin:$PATH"
+export PATH="$HOME/.deno/bin:$PATH"
 export EDITOR=vim
-export ALPHAVANTAGE_API_KEY=5Q2JC0EOV3BHUYX1
+export ALPHAVANTAGE_API_KEY=<your alphavantage api key>
 export CLICOLOR=1
 source ~/.zprofile
 export python='python3'
@@ -32,7 +32,7 @@ export LIBTOOLIZE=`which glibtoolize`
 ################ ZSH ##############################
 source ~/.local/share/zsh/plugins/zsh-shift-select/zsh-shift-select.plugin.zsh
 fpath+=$HOME/.zsh/pure
-source /Users/tom/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath+=$HOME/.zsh/pure
 #autoload -U promptinit; promptinit
 
@@ -93,7 +93,6 @@ alias clearhist='rm -r ~/.zsh_history'
 alias qfinder="osascript -e 'tell application \"finder\" to quit'"
 alias search='ls -la | grep'
 alias zshrce='vim ~/.zshrc'
-alias zshconf='cd /Users/tom/zsh'
 alias zshconfe='vim /Users/tom/zsh/zshconf.txt'
 alias superstonk='superstonk -interval 1 -symbol'
 alias drive='ssh pi@192.168.1.124'
@@ -180,5 +179,4 @@ pac
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
-export PATH=$PATH:/Users/tom/.spicetify
 
