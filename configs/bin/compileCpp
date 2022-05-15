@@ -1,0 +1,8 @@
+#!/bin/bash
+path=$(pwd)
+fullfile=$1
+file="${fullfile%.*}"
+cd "$path"
+g++ $fullfile -o $file
+
+
