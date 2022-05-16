@@ -92,6 +92,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim'
 Plug 'valloric/youcompleteme'
 Plug 'junegunn/fzf'
+Plug 'github/copilot.vim'
 Plug 'weirongxu/coc-explorer'
 Plug 'mattn/emmet-vim'
 call plug#end()

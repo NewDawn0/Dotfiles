@@ -359,6 +359,10 @@ require("packer").startup({
     })
     -- show and trim trailing whitespaces
     use {'jdhao/whitespace.nvim', event = 'VimEnter'}
+    
+    -- github copilot
+    use 'github/copilot.vim'
+
 
     -- file explorer
     use {
