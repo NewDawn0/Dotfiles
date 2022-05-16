@@ -16,13 +16,17 @@ alias restartYabai="launchctl kickstart -k \"gui/${UID}/homebrew.mxcl.yabai\""
 alias yabaiOff="brew services stop yabai"
 alias yabaiOn="brew services start yabai"
 
+################ Plugins  ##########################
+plugins=(
+  vi-mode
+)
+
 ################ Exports ##########################
 export TERM=xterm-256color                 # 256 color
 HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export PATH="$HOME/.deno/bin:$PATH"
 export EDITOR=vim
-export ALPHAVANTAGE_API_KEY=<your alphavantage api key>
-export CLICOLOR=1
+export ALPHAVANTAGE_API_KEY=5Q2JC0EOV3BHUYX1
 source ~/.zprofile
 export python='python3'
 #export PATH="/usr/local/opt/python/libexec/bin:$PATH"
@@ -31,10 +35,17 @@ export LIBTOOLIZE=`which glibtoolize`
 
 ################ ZSH ##############################
 source ~/.local/share/zsh/plugins/zsh-shift-select/zsh-shift-select.plugin.zsh
-fpath+=$HOME/.zsh/pure
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath+=$HOME/.zsh/pure
 #autoload -U promptinit; promptinit
+
+# Vim
+bindkey -v
+export KEYTIMEOUT=1
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+VI_MODE_SET_CURSOR=true
+MODE_INDICATOR="%F{white}+%f"
+INSERT_MODE_INDICATOR="%F{yellow}+%f"
 
 # Pure
 #prompt pure
@@ -56,7 +67,6 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
-
 ################ Aliases  ##########################
 # Brew
 alias brewup='brew update && brew upgrade'
@@ -170,11 +180,10 @@ listalias ()
 
 ################ Startup ##########################
 clear
-#bash /Users/tom/zsh/zshstartup.sh
-#/Users/tom/zsh/weather baden
 pac
 #unix
 #gh-cal NewDawn0
+
 ################ Fig autcomplete  #################
 
 # Fig post block. Keep at the bottom of this file.
