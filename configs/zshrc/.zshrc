@@ -1,6 +1,7 @@
 # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
 ################ Fig autcomplete  #################
+
 ################ Credits  #########################
 # ================
 # Ⓒ NewDawn0 (Tom)
@@ -27,16 +28,13 @@ HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export PATH="$HOME/.deno/bin:$PATH"
 export EDITOR=vim
 export ALPHAVANTAGE_API_KEY=5Q2JC0EOV3BHUYX1
-source ~/.zprofile
 export python='python3'
-#export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export LIBTOOL=`which glibtool`
 export LIBTOOLIZE=`which glibtoolize`
 
 ################ ZSH ##############################
-source ~/.local/share/zsh/plugins/zsh-shift-select/zsh-shift-select.plugin.zsh
-source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fpath+=$HOME/.zsh/pure
+source $HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #autoload -U promptinit; promptinit
 
 # Vim
@@ -47,15 +45,19 @@ VI_MODE_SET_CURSOR=true
 MODE_INDICATOR="%F{white}+%f"
 INSERT_MODE_INDICATOR="%F{yellow}+%f"
 
+# autopair plugin
+source ~/zsh/plugins/zsh-autopair/autopair.zsh
+autopair-init
+
 # Pure
+#fpath+=$HOME/zsh/plugins/pure
 #prompt pure
-fpath+=$HOME/.zsh/pure
 
 # Starship
 eval "$(starship init zsh)"
 
 # p10k
-#source ~/powerlevel10k/powerlevel10k.zsh-theme
+#source ~/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 #ZSH_THEME="powerlevel10k/powerlevel10k"
 
 HISTSIZE=10000
@@ -67,9 +69,10 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
-################ Aliases  ##########################
+
+############### Aliases  ##########################
 # Brew
-alias brewup='brew update && brew upgrade'
+alias brewup='#brew update && brew upgrade'
 alias brewin='brew install'
 alias brewrm='brew remove'
 alias brewrein='brew reinstall'
