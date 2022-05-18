@@ -1,6 +1,0 @@
-#!/bin/bash
-filename=$1
-basename=${filename%.*}
-nasm -f macho64 $filename
-ld -macosx_version_min 10.7.0 -o $basename $basename.o
-rm  $basename.o

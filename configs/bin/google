@@ -1,3 +1,0 @@
-#!/bin/sh
-query=$(printf '%s' "$*" | tr ' ' '+')
-website-popup "https://www.google.com/search?q=$query" --size=900x600

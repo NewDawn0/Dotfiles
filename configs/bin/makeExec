@@ -1,8 +1,0 @@
-#!/bin/bash
-path=$(pwd)
-file=$1
-execFile=$(echo "$file" | cut -f 1 -d '.')
-mv $file $execFile
-pathToFile="$path/$execFile"
-chmod +x $execFile
-cp -i $execFile /usr/local/bin

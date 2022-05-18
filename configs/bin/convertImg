@@ -1,5 +1,0 @@
-#!/bin/bash
-file=$1
-size=$2
-size2=$3
-convert "$file" -resize $size"x"$size2 "out$file"
