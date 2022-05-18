@@ -1,0 +1,67 @@
+#!/bin/bash
+version=0.1
+null=0
+staringWords=("react", "adieu", "canoe", "alone", "atone", "sauce ")
+startingWord=$(printf "%s\n" "${staringWords[@]}" | shuf -n1)
+cd /Users/tom
+function guide() {
+    clear
+    echo -e "\033[01;32mEnter correctly placed letters for none use a '.'\033[0m"
+    echo -e "\033[01;32mEnter exactly 5 characters\033[0m"
+    echo -e "\033[01;32mExample: .a..u\033[0m"
+    echo ""
+    echo -e "\033[01;32mEnter letters which aren't in word\033[0m\033[0m"
+    echo -e "\033[01;32mExample: rnp      =>      letters 'r' 'n' 'p' are not contained in word\033[0m"
+    echo ""
+    echo -e "\033[01;32mEnter letters which are in the wrong spot\033[0m"
+    echo -e "\033[01;32mExample: e o    =>      letters 'e' 'o' are in the wrong spot\033[0m"
+    echo ""
+    echo ""
+}
+function getWord() {
+    echo ""
+    echo -ne "\033[01;33mCorrectly placed letters:   \033[0m"
+    read correct
+    echo -ne "\033[01;33mUncontained letters:   \033[0m"
+    read uncontained
+    echo -ne "\033[01;33mContained letters:   \033[0m"
+    read contained
+    lenCorrect=$(echo "$correct" |tr -d '\n' | wc -c)
+    lenContained=$(echo "$contained" |tr -d '\n' | wc -c)
+    echo ""
+    #echo "run:"
+    if [ "$contained" == "" ];then
+        lenContained=0
+        if [ "$uncontained" == "" ];then
+            item=$(echo -n "cat /usr/share/dict/words | grep ^$correct$ | grep -v \'")
+        else
+            item=$(echo -n "cat /usr/share/dict/words | grep ^$correct$ | grep -v \' | grep -v '['$uncontained']'")
+        fi
+    else
+        lenContained=$(echo "$contained" |tr -d '\n' | wc -c)
+        if [ "$uncontained" == "" ];then
+            item=$(echo -n "cat /usr/share/dict/words | grep ^$correct$ | grep -v \'"
+            seq $lenContained | while read i; do
+                char=$(echo "$contained" | cut -c $i)
+                echo -n " | grep $char"
+            done)
+        else
+            item=$(echo -n "cat /usr/share/dict/words | grep ^$correct$ | grep -v \' | grep -v '['$uncontained']'"
+            seq $lenContained | while read i; do
+                char=$(echo "$contained" | cut -c $i)
+                echo -n " | grep $char"
+            done)
+        fi
+    fi
+    echo "$item" > .wordle.sh
+    words=$(bash .wordle.sh)
+    echo -e "\033[01;32m$words\033[0m"
+}
+echo -e "\033[01;32mWordle Solver v.$version\033[0m"
+echo -e "\033[01;32mTry => ${startingWord:0:${#startingWord}-1}\033[0m"
+echo ""
+read waiting
+guide
+for i in 1 2 3 4 5 6; do
+    getWord
+done
