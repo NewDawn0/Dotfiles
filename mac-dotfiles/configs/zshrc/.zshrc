@@ -27,7 +27,7 @@ export TERM=xterm-256color                 # 256 color
 HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export PATH="$HOME/.deno/bin:$PATH"
 export EDITOR=vim
-export ALPHAVANTAGE_API_KEY=5Q2JC0EOV3BHUYX1
+#export my aplphavantage api key
 export python='python3'
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export LIBTOOL=`which glibtool`
